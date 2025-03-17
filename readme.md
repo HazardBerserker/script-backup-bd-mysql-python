@@ -6,6 +6,8 @@
 
 - O valor da % que é exibida enquanto o backup está em execução não é tão preciso, o dump final pode ser um pouco maior ou menor do que o valor definido como **valor final estimado**.
 
+- Abra um CMD e digite ``mysql --version`` caso ele retorne a versão de seu MySQL quer dizer que a ferramenta foi instalada e você pode prosseguir com a leitura abaixo, se retornar um erro instale o MySQL corretamente (com SQL Server), (esse passo é meio óbvio, mas as vezes quem trabalha com docker acaba esquecendo).
+
 ### Passo 1:
 - Alterar corretamente os dados do banco, usuário, senha, conexão...
 
