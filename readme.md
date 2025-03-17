@@ -2,7 +2,7 @@
 
 ## Pontos de atenção para bom funcionamento do Script:
 
-- Por padrão ele vem com a variável ``tabela_excluida`` preenchida, essa variável tem o propósito de não trazer uma tabela específica caso seja do interesse do usuário, a lógica não se aplica a muitas tabelas e deve ser readaptada pra caso hajam mais tabelas a serem ignoradas. O que de fato acontece é que trazemos a tabela vazia ao invés de somente ignora-la.
+- Por padrão ele vem com a variável ``tabela_excluida`` preenchida, essa variável tem o propósito de não trazer uma tabela específica caso seja do interesse do usuário, a lógica não se aplica a muitas tabelas e deve ser readaptada pra caso hajam mais tabelas a serem ignoradas. O que de fato acontece é que trazemos a tabela vazia ao invés de somente ignora-la. A lógica é a seguinte, ele cria um dump pra tabela ignorada e outro para o restante das tabelas, no fim junta os dois. Se você cancelar a execução do script no meio do caminho haverão dois dumps. Fiz dessa forma pois ao utilizar a lógica de ``--no-data`` para a tabela ignorada junto com todas as outras tabelas e gerar um dump único atrasou a execução do script em no mínimo 10x, diante disso tive que adaptar a lógica.
 
 - O valor da % que é exibida enquanto o backup está em execução não é tão preciso, o dump final pode ser um pouco maior ou menor do que o valor definido como **valor final estimado**.
 
